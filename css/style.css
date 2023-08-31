@@ -1,0 +1,21 @@
+header {
+    height: 150px;
+    width: 100%;
+    background-color: #cc66a5;
+    line-height: 80px;
+    text-align: center;
+}
+.todo-list{
+    list-style-type: none;
+}
+.a {
+    cursor: pointer;
+}
+.crossed{
+    font-size: 20px;
+    text-decoration: line-through;
+}
+.dissolvenza {
+    transition: opacity 3s ease-in-out;       
+    opacity: 0;                           /* Rendi il task trasparente */       
+}

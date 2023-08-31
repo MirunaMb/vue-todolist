@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla Caroussel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- LINK CSS STYLE -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- LINK VUE -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="container" id="app">
+        <header class="header">
+            <img class="img-fluid text-center" width="300"
+                src="./list-hand-drawn-black-color-modern-calligraphy-phrase_218179-1684.avif" alt=""></img>
+        </header>
+        <main>
+            <div class="wrapper  mx-auto row-cols-1">
+                <ul class="todo-list" v-if="tasks.length > 0">
+                    <li v-for="(elemento,index) in tasks" class="mt-5">
+                        <p :class="{'crossed': elemento.done, 'dissolvenza': elemento.done}">
+                            <span v-if="!elemento.done">{{ elemento.text }}</span>
+                            <del v-else>{{ elemento.text }}"></del>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
