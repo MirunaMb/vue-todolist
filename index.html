@@ -33,6 +33,7 @@
                         <p :class="{'crossed': elemento.done, 'dissolvenza': elemento.done}">
                             <span v-if="!elemento.done">{{ elemento.text }}</span>
                             <del v-else>{{ elemento.text }}"></del>
+                            <i class="fa-solid fa-x mx-5" @click="removeTask(index)"></i>
                     </li>
                 </ul>
             </div>
