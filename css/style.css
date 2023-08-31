@@ -19,3 +19,6 @@ header {
     transition: opacity 3s ease-in-out;       
     opacity: 0;                           /* Rendi il task trasparente */       
 }
+.input-group{
+    margin-top: 100px;
+}

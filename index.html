@@ -28,6 +28,13 @@
         </header>
         <main>
             <div class="wrapper  mx-auto row-cols-1">
+                <div class="input-group mb-3 w-50 mx-auto">
+                    <input type="text" class="form-control" placeholder="Scrivi qui cosa c'è da fare"
+                        aria-label="Recipient's username" aria-describedby="button-addon2" v-model="newTask" />
+                    <button class="btn btn-outline-success" type="button" id="button-addon2" @click="addNewTask()">
+                        Aggiungi
+                    </button>
+                </div>
                 <ul class="todo-list" v-if="tasks.length > 0">
                     <li v-for="(elemento,index) in tasks" class="mt-5">
                         <p :class="{'crossed': elemento.done, 'dissolvenza': elemento.done}">
